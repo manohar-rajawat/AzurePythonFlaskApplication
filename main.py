@@ -3,7 +3,6 @@
 from azure.cosmos import exceptions, CosmosClient, PartitionKey
 from flask import Flask,render_template,session,request,redirect,flash,url_for
 from flask import jsonify,flash
-import random
 
 #Initializing the cosmos db
 url = "https://azurecosmosdbiot.documents.azure.com:443/"
@@ -25,13 +24,6 @@ cont = db.create_container_if_not_exists(id=c_name,
 
 app = Flask(__name__)
 app.secret_key = 'thisisthesecretkeydonotstealit'
-
-@app.route("/api",methods=['POST'])
-def api():
- response = request.get_json()
- print('The response from the client is :',response)
- lat_lon = [random.uniform(10,100),random.uniform(10,100)]
- return jsonify(lat_lon)
 
 @app.route("/")
 def home():
@@ -80,4 +72,4 @@ def profile():
    return render_template("profile.html")
 
 if __name__ == "__main__":
- app.run(host="0.0.0.0")
+ app.run()
