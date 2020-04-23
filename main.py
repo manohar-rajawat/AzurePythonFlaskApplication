@@ -32,7 +32,7 @@ def home():
  else:
   return render_template("index.html")
 
-@app.route("/login",methods=['POST','GET'])
+@app.route("/login",methods=['POST'])
 def login():
  if request.method == 'POST':
   username = request.form['username']
