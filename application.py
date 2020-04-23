@@ -17,7 +17,7 @@ db_name = 'MyIoTDatabase'
 db = client.create_database_if_not_exists(id=db_name)
 
 #Container Setting
-c_name = 'MyIoTContainer'
+c_name = 'UserLoginContainer'
 cont = db.create_container_if_not_exists(id=c_name,
                         partition_key=PartitionKey(path="/country"),
                         offer_throughput=400
