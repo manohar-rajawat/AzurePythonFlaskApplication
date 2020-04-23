@@ -147,6 +147,14 @@ iframe {
   margin: 0 auto;
 }
 
+.flashes {
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+    color: palevioletred;
+}
+
 .container-login100 {
   width: 100%;  
   min-height: 100vh;
@@ -343,6 +351,10 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.sign-up{
+  margin-left: 10px;
 }
 
 .login100-form-btn {
